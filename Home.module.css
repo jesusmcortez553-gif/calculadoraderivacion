@@ -1,0 +1,383 @@
+/* Estilos - Calculadora Derivación Comercial BCP
+   Este archivo va en: styles/Home.module.css */
+
+.main {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #1B3B7D 0%, #6B4C9A 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.logo p {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+/* INPUTS */
+.inputSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.inputGroup input {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #6B4C9A;
+  box-shadow: 0 0 0 3px rgba(107, 76, 154, 0.1);
+}
+
+/* ERROR Y LOADING */
+.errorBox {
+  background: #FCEBEB;
+  border: 1px solid #E74C3C;
+  color: #E74C3C;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.loadingBox {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+}
+
+/* MÉTRICAS */
+.metricsSection {
+  margin-bottom: 2rem;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.metricCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.metricCard label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.metricValue {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1B3B7D;
+}
+
+/* STATUS SECTION */
+.statusSection {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.statusSection label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 12px;
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progressFill {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.statusText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+/* ACTION SECTION */
+.actionSection {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.actionSection h3 {
+  margin: 0 0 1rem 0;
+  font-size: 16px;
+  color: #1B3B7D;
+}
+
+.actionBox {
+  background: #E6F1FB;
+  border-left: 4px solid #378ADD;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.actionText {
+  margin: 0 0 0.5rem 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.actionHighlight {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #378ADD;
+}
+
+/* DETAILS SECTION */
+.detailsSection {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.detailsSection h3 {
+  margin: 0 0 1rem 0;
+  font-size: 16px;
+  color: #1B3B7D;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.detailItem {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.detailItem label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.detailItem p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.detailItem strong {
+  color: #6B4C9A;
+  font-weight: 600;
+}
+
+.projectionHighlight {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4CAF50;
+}
+
+/* TABLE SECTION */
+.tableSection {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.tableSection h3 {
+  margin: 0 0 1rem 0;
+  font-size: 16px;
+  color: #1B3B7D;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table thead {
+  background: #f9f9f9;
+  border-bottom: 2px solid #ddd;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.table strong {
+  color: #6B4C9A;
+  font-weight: 600;
+}
+
+/* FOOTER */
+.footer {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .inputGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  .metricValue {
+    font-size: 24px;
+  }
+
+  .actionHighlight {
+    font-size: 14px;
+  }
+}
